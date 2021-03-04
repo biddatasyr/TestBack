@@ -58,8 +58,6 @@ namespace TestBack
                 endpoints.MapControllers();
             });
 
-            SeedData.SeedDatabase(app.ApplicationServices
-                .GetRequiredService<MarketContext>());
         }
     }
 }
