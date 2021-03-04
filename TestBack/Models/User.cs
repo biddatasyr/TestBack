@@ -16,6 +16,7 @@ namespace TestBack.Models
         public string Username { get; set; }
 
         [JsonIgnore]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
     }
 }
