@@ -11,7 +11,7 @@ namespace TestBack.Models
         {
             context.Database.EnsureCreated();
 
-            if (context.Users.Count() == 0)
+            if (!context.Users.Any())
             {
                 var Admin = new User
                 {
@@ -20,8 +20,9 @@ namespace TestBack.Models
                     Username = "MhdRab",
                     Password = "123456789"
                 };
+                context.SaveChanges();
             }
-            context.SaveChanges();
+            
         }
     }
 }
