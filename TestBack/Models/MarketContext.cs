@@ -13,6 +13,11 @@ namespace TestBack.Models
 
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>().HasData(new User { FirstName = "Mohammed", LastName = "Rabee", Username = "MhdRab", Password = "123456789" });
+        }
+        
         public DbSet<User> Users { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Rating> Ratings { get; set; }
