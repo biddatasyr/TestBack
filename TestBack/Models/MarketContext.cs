@@ -17,9 +17,9 @@ namespace TestBack.Models
             modelBuilder.Entity<User>().HasData(new User { Id = 1, FirstName = "Mohammed", LastName = "Rabee", Username = "MhdRab", Password = "123456789" });
         }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<Product> Products { get; set; }
-        public DbSet<Rating> Ratings { get; set; }
-        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<Rating> Rating { get; set; }
+        public DbSet<Supplier> Supplier { get; set; }
     }
 }
