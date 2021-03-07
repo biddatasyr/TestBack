@@ -31,10 +31,10 @@ namespace TestBack
 
             services.AddControllers();
             services.AddDbContext<MarketContext>(option => option.UseSqlServer(Configuration.GetConnectionString("MarketContextConnectionString")));
-            services.AddSwaggerGen(c =>
+/*            services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TestBack", Version = "v1" });
-            });
+            });*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,8 +43,8 @@ namespace TestBack
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TestBack v1"));
+/*                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TestBack v1"));*/
             }
 
             app.UseHttpsRedirection();

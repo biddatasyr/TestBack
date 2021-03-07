@@ -10,11 +10,11 @@ namespace TestBack.Models
     {
         public MarketContext(DbContextOptions<MarketContext> options) : base(options)
         {
-
+            
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().HasData(new User { FirstName = "Mohammed", LastName = "Rabee", Username = "MhdRab", Password = "123456789" });
+            modelBuilder.Entity<User>().HasData(new User { Id = 1, FirstName = "Mohammed", LastName = "Rabee", Username = "MhdRab", Password = "123456789" });
         }
 
         public DbSet<User> Users { get; set; }
